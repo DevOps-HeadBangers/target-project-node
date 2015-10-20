@@ -8,14 +8,21 @@ dir.readFiles(__dirname, {
         var digitalOceanToken = findDigitalOceanToken(String(content));
         var awsToken = findAwsToken(String(content));
         if(awsToken != null || digitalOceanToken != null){
-        	console.log("Key in commit. Remove and commit again");
+        	console.log("Key in commit. Remove and commit again.");
         	process.exit(1);
         }
         next();
     },
     function(err, files) {
         if (err) throw err;
-        //console.log('finished reading files:', files);
+        for(fileIndex in files){
+            var path = files[fileIndex];
+            var ext = path.split('.').pop();
+            if(ext == 'pem'){
+                console.log("PEM file found. Commit failed. Remove PEM file and commit again.");
+                process.exit(1);
+            }
+        }
     });
 
 
