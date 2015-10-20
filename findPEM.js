@@ -11,7 +11,7 @@ dir.readFiles(__dirname, {
     function(err, files) {
         if (err) throw err;
         if(files.length != 0){
-            console.log("PEM file found.");
+            console.log("PEM file found. Commit failed. Remove PEM file and commit again.");
             process.exit(1);
         }
     });
