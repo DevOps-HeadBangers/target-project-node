@@ -24,5 +24,5 @@ function findDigitalOceanToken(content){
 }
 
 function findAwsToken(content){
-	return content.match(/\"AKIA[a-zA-Z0-9]{16,17}\"/);
+	return content.match(/\"AKI[a-zA-Z0-9]{17,18}\"/);
 }
