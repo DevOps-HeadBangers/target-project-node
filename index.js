@@ -1,4 +1,4 @@
-use strict;
+'use strict';
 
 // Code for Milestone 2
 function inc(p, q) {
