@@ -1,0 +1,22 @@
+{
+  "name": "target-node-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Kumar Utsav<aeon.utsav@gmail.com>",
+  "license": "MIT",
+  "scripts":{
+    "lint": "eslint -f checkstyle index.js > checkstyle-result.xml",
+    "test": "istanbul cover test.js > test.tap && istanbul report clover"
+  },
+  "devDependencies": {
+    "eslint": "^0.10.0",
+    "istanbul": "^0.3.2",
+    "tape": "^3.0.3",
+    "random-js": "^1.0.5",
+    "underscore": "^1.7.0",
+    "esprima": "^1.2.3",
+    "list-iterator": "^1.0.1",
+    "sloc": "^0.1.9"
+  }
+}
